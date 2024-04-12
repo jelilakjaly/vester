@@ -1,0 +1,14 @@
+name = "jelilakjaly/vester"
+version = "0.0.0"
+license = "Apache-2.0"
+description = "Aiken contracts for project 'jelilakjaly/vester'"
+
+[repository]
+user = "jelilakjaly"
+project = "vester"
+platform = "github"
+
+[[dependencies]]
+name = "aiken-lang/stdlib"
+version = "1.7.0"
+source = "github"

@@ -1,0 +1,83 @@
+{
+  "preamble": {
+    "title": "jelilakjaly/vester",
+    "description": "Aiken contracts for project 'jelilakjaly/vester'",
+    "version": "0.0.0",
+    "plutusVersion": "v2",
+    "compiler": {
+      "name": "Aiken",
+      "version": "v1.0.26-alpha+075668b"
+    },
+    "license": "Apache-2.0"
+  },
+  "validators": [
+    {
+      "title": "daily_linear.unlock",
+      "datum": {
+        "title": "datum",
+        "schema": {
+          "$ref": "#/definitions/daily_linear~1DatumType"
+        }
+      },
+      "redeemer": {
+        "title": "_r",
+        "schema": {
+          "$ref": "#/definitions/Void"
+        }
+      },
+      "compiledCode": "590436010000323232323232322323232232253330083232323232323232325332330123001301337540122646464a66602a6026602c6ea80044c8c8c94ccc060c8c8cc004004028894ccc078004528099299980e19b8f375c604200400829444cc00c00c004c084004dd71800980d1baa0171323232533301e3021002132533301c300b301d3754002264a66603a66e24dd69805980f9baa01c0011533301d337106eb4c020c07cdd500e19b83337020026eb4c02cc07cdd500e19b823370466e0920d00f481e12078480c04c8c8c8c8c94ccc088cdc400080109919299981398150010a99981219b873330053756601e604c6ea8004dd7180318131baa023375c600e604c6ea808ccdc0802001899299981299b8748010c098dd50008991919299981419b8748010c0a4dd50008991919baf0023230183302f30300013302f375066e00dd6980b18169baa00648008c0c4c0c4004c0b0dd50029813000981698151baa0011630103029375400860460026054604e6ea800458c034c098dd5180798131baa00a161630280013300a01523375e6022604a6ea800403452899b82337006eb4c030c08cdd50102400490605c011998009bab300b30223754601660446ea8018dd7180118111baa01f375c600660446ea807c888c94ccc08cc048c090dd50008a400026eb4c0a0c094dd5000992999811980918121baa00114c103d87a80001323300100137566052604c6ea8008894ccc0a0004530103d87a8000132323253330283371e00e6eb8c0a400c4c054cc0b0dd4000a5eb804cc014014008dd698148011816001181500099198008008021129998138008a6103d87a8000132323253330273371e00e6eb8c0a000c4c050cc0acdd3000a5eb804cc014014008dd5981400118158011814800918121812981298128009181198121812181218120008b0b1bad3021301e37540022c6012603a6ea8c024c074dd50060b180f80099800807119baf3008301c3754600a60386ea800401088c8cc00400400c894ccc07c00452f5c026464a66603c600a00426604400466008008002266008008002604600460420022c4603a603c603c002600860306ea8c004c060dd5180d980c1baa0022301b301c0011632323300100100b22533301a00114c103d87a80001323253330193375e600e60366ea80080144c018cc0740092f5c0266008008002603c00460380026032602c6ea802cdd2a4000460300026e1d200214a06eb0c054c058008c050004c050c050c050c050c050008dd61809000980918090011bac3010001300c3754601e004601c601e00260146ea800452613656325333007300530080011533300a300900114985858dd5000980080192999802180118029baa00113232323232323232323253330113014002149858dd7180900098090011bae30100013010002375c601c002601c0046eb4c030004c030008dd6980500098031baa00116370e90002b9a5573aaae7955cfaba05742ae89",
+      "hash": "7403127af5c8a02022aae1cfd83c79222655c90152243627dbfc19f0"
+    }
+  ],
+  "definitions": {
+    "ByteArray": {
+      "dataType": "bytes"
+    },
+    "Int": {
+      "dataType": "integer"
+    },
+    "Void": {
+      "title": "Unit",
+      "description": "The nullary constructor.",
+      "anyOf": [
+        {
+          "dataType": "constructor",
+          "index": 0,
+          "fields": []
+        }
+      ]
+    },
+    "daily_linear/DatumType": {
+      "title": "DatumType",
+      "anyOf": [
+        {
+          "title": "DatumType",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "start_time",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "day",
+              "$ref": "#/definitions/Int"
+            },
+            {
+              "title": "owner",
+              "$ref": "#/definitions/ByteArray"
+            },
+            {
+              "title": "token_policy",
+              "$ref": "#/definitions/ByteArray"
+            },
+            {
+              "title": "token_name",
+              "$ref": "#/definitions/ByteArray"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
