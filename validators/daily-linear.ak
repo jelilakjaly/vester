@@ -14,7 +14,6 @@ type PosixTime =
 type VerificationKeyHash =
   Hash<Blake2b_224, VerificationKey>
 
-// todo change the name
 type DatumType {
   start_time: PosixTime,
   day: Int,
